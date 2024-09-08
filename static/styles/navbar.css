@@ -1,0 +1,66 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f0b6b6;
+    padding: 5px 10px;
+    margin: -7px -7px 0 -7px;
+    justify-content: space-between;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: 600;
+    color: #fd3939;
+}
+
+.logo img {
+    max-width: 40px; 
+    height: auto;
+}
+
+
+.search-form input {
+    padding: 10px 40px;
+    border: none;
+    background-color: #c79d9d;
+    border-radius: 5px;
+}
+
+.search-form input:hover {
+    border: solid 2px #d37e7e;
+}
+
+.auth-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+}
+
+.auth-links a {
+    color: #fd3939;
+    font-size: 17px;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.auth-links a:hover {
+    color: #ff0000;
+    text-decoration: underline #ff0000 solid 2px;
+}
+
+.auth-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #c79d9d;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: cursive;
+    color: #fff;
+}

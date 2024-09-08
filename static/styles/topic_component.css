@@ -1,0 +1,48 @@
+.browse-topics {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.browse-topics h3 {
+    font-size: 20px;
+    color: #ff0000;
+}
+
+.browse-topics h3:hover {
+    color: #fd5d5d;
+}
+
+.topic-link {
+    background-color: #f3a1a1;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.topic-link a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.topic-link:hover {
+    background-color: #f79494;
+}
+
+.topic-links  {
+    padding: 5px 10px;
+}
+
+.topic-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #ff0000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.topic-links a:hover {
+    color: #fd5d5d;
+}

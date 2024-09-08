@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funza</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+    <link rel="icon" href="{% static 'images/letter-f.png' %}">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="{% url 'home' %}" class="logo"> <img src="{% static 'images/letter-f.png' %}" alt="Funza" class="logo-image"> Funza</a>
+
+        <form method="GET" action="{% url 'home' %}" class="search-form">
+            <input type="text" name="q" placeholder="Search Rooms...">
+        </form>
+
+        <div class="auth-links">
+            {% if request.user.is_authenticated %}
+                <p class="username">{{ request.user.username }}  @{{user.username}}</p>
+                <a href="{% url 'logout' %}" class="auth-button-logout">Logout</a>
+            {% else %}
+                <button class="auth-button"> <a href="{% url 'login' %}">Login</a> </button>
+            {% endif %}
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

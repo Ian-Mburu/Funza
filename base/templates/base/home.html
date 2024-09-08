@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <link rel="icon" href="{% static 'images/letter-f.png' %}">
+</head>
+<body>
+
+<div class="home-container">
+
+    <div class="sidebar">
+        {% include 'base/topic_component.html' %}
+    </div>
+
+    <div class="main-content">
+        <h5>{{room_count}} rooms available</h5>
+        <a href="{% url 'create-room' %}" class="create-room-btn">Create Room</a>
+
+        <div class="feed">
+            {% include 'base/feed_component.html' %}
+        </div>
+    </div>
+
+    <div class="activities">
+        {% include 'base/activity_component.html' %}
+    </div>
+
+</div>
+
+</body>
+</html>
+
+{% endblock content %}
