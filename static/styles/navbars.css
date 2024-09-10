@@ -41,6 +41,7 @@
     flex-direction: row;
     align-items: center;
     gap: 70px;
+    margin-left: 500px;
 }
 
 .auth-links a {
@@ -51,8 +52,8 @@
 }
 
 .auth-links a:hover {
-    color: #ff0000;
-    text-decoration: underline #ff0000 solid 2px;
+    color: #ff5454;
+    text-decoration: underline #ff5454 solid 2px;
 }
 
 .auth-button {
@@ -63,4 +64,30 @@
     font-size: 17px;
     font-family: cursive;
     color: #fff;
+}
+
+/*  Avatar */
+.navbar-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navbar-2 a {
+    font-size: 16px;
+    font-family: cursive sans-serif;
+    color: #fd3939;
+}
+
+.navbar-2 a:hover {
+    color: #ff5454;
+    text-decoration: underline #ff5454 solid 2px;
+}
+
+.rounded-avatar .avatar {
+    border-radius: 50%;
+    width: 50px;  
+    height: 50px; 
+    object-fit: cover;
+    display: block; 
 }

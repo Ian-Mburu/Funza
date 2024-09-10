@@ -1,0 +1,84 @@
+
+/* Layout for the home page */
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.home-container > div {
+    background-color: #f0b6b6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content styling */
+.main-content h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2782e9;
+}
+
+.create-room-btn{
+    text-decoration: none;
+    color: #f0b6b6;
+    background: #2782e9;
+    font-size: 16px;
+    font-family: cursive;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.create-room-btn:hover{
+    background: #4091ee;
+}
+
+.create-room {
+    background-color: #f18989; /* Background color for the section */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items horizontally */
+    gap: 10px; /* Space between items */
+    text-align: center; /* Center-align text */
+}
+
+.create-room h5 {
+    font-size: 18px; /* Font size for the header */
+    color: #ffffff; /* Text color */
+    display: flex;
+    align-items: center; /* Center-align items within the header */
+    gap: 8px; /* Space between the text and the image */
+}
+
+.add-post {
+    width: 24px; /* Adjust the size of the image */
+    height: 24px; /* Maintain aspect ratio */
+}
+
+.create-room-btn {
+    display: flex;
+    align-items: center; /* Center-align items within the button */
+    text-decoration: none;
+    background-color: #fd6868; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    gap: 8px; /* Space between the image and the text */
+}
+
+.create-room-btn:hover {
+    background-color: #f87171; /* Darker background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.create-room-btn .add-post {
+    width: 20px; /* Adjust the size of the image inside the button */
+    height: 20px; /* Maintain aspect ratio */
+}

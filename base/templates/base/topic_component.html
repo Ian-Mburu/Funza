@@ -1,5 +1,5 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'styles/topic_component.css' %}">
+<link rel="stylesheet" href="{% static 'styles/topics_components.css' %}">
 
 <div class="browse-topics">
     <h3>Browse Topics</h3>
@@ -7,13 +7,18 @@
 
     <div class="topic-link">
         <a href="{% url 'home' %}">All Topics</a>
+        <span>{{topics.count}}</span>
     </div>
 
     
 </div>
 
 {% for topic in topics %}
-        <div class="topic-links">
-            <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a>
+        <div class="topic-link-1">
+            <div class="topic-links">
+                <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}} </a>
+            
+            </div>
+        <span>{{topic.room_set.all.count}}</span>
         </div>
 {% endfor %}

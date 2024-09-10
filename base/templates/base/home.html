@@ -10,7 +10,7 @@
     <title>Home</title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/homee.css' %}">
     <link rel="icon" href="{% static 'images/letter-f.png' %}">
 </head>
 <body>
@@ -22,8 +22,15 @@
     </div>
 
     <div class="main-content">
-        <h5>{{room_count}} rooms available</h5>
-        <a href="{% url 'create-room' %}" class="create-room-btn">Create Room</a>
+        
+        <div class="create-room">
+            <h5> <img src="{% static 'images/add-post.png' %}" alt="Add Post" class="add-post"> {{ room_count }} available</h5>
+            <a href="{% url 'create-room' %}" class="create-room-btn">
+                <img src="{% static 'images/add-post.png' %}" alt="Add Post" class="add-post">
+                Create a Post
+            </a>
+        </div>
+        
 
         <div class="feed">
             {% include 'base/feed_component.html' %}

@@ -1,86 +1,123 @@
-/* Container for the rooms list */
 .rooms-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between room cards */
-    padding: 20px;
-}
-
-/* Individual room card styling */
-.room-card {
-    background-color: #f3a1a1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-}
-
-/* Room actions styling (Edit/Delete) */
-.room-actions {
-    margin-bottom: 10px;
-    display: flex;
-    gap: 10px; /* Space between action buttons */
-}
-
-.room-actions .edit-btn,
-.room-actions .delete-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 5px 10px;
+    width: 600px;
     border-radius: 5px;
+    margin: 50px auto; /* Centered horizontally */
+    padding: 20px;
+}
+
+.roomListRoom {
+    background: #f18989;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for room cards */
+}
+
+.roomListRoom:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+
+}
+
+.roomListRoom__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.roomListRoom__author {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    color: #333;
+}
+
+.avatar.avatar--small img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.roomListRoom__actions {
     font-size: 14px;
+    color: #555;
+}
+
+.roomListRoom__content {
+    margin-bottom: 10px;
+}
+
+.room-title {
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: cursive, sans-serif;
+    background: #e75b5b;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.room-title:hover {
+    color: #e7baba;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+.roomListRoom__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.roomListRoom__joined {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.styled-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 50%;
     transition: background-color 0.3s ease;
 }
 
-.room-actions .delete-btn {
-    background-color: #dc3545;
+.styled-image {
+    width: 25px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.room-actions .edit-btn:hover {
-    background-color: #0056b3;
+.styled-image:hover {
+    transform: scale(1.1);
 }
 
-.room-actions .delete-btn:hover {
-    background-color: #c82333;
+.roomListRoom__topic {
+    background: #e75b5b;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-/* Room details styling */
-.room-details {
+.group-icon {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     gap: 5px;
 }
 
-/* Host link styling */
-.room-host {
-    color: #007bff;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.room-host:hover {
-    text-decoration: underline;
-}
-
-/* Room title styling */
-.room-title {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-.room-title a {
-    color: #333;
-    text-decoration: none;
-}
-
-.room-title a:hover {
-    text-decoration: underline;
-}
-
-/* Room topic styling */
-.room-topic {
-    font-size: 14px;
-    color: #666;
+.group-icon a {
+    color: #555;
 }

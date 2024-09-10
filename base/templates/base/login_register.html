@@ -2,40 +2,52 @@
 
 {% block content %}
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/loginRegister.css' %}">
+
 {% if page == 'login' %}
-<div>
-    <form method="POST" action="">
-        {% csrf_token %}
+    <div class="auth-container">
+        <h2>Login</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Enter Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Enter Password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn--main">
+            </div>
+        </form>
 
-        <input type="text" name="username" placeholder="Enter Username">
-
-        <input type="password" name="Login" placeholder="Enter Password">
-
-        <input type="submit" value="Login" id="">
-    </form>
-
-    <p>Have'nt Signed up yet?</p>
-    <a href="{% url 'register' %}">Signup</a>
-</div>
-
+        <p class="auth-text">Haven't signed up yet?</p>
+        <a href="{% url 'register' %}" class="auth-link">Signup</a>
+    </div>
 {% else %}
+    <div class="auth-container-2">
+        <h2>Register</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% for error in field.errors %}
+                        
+                            <span class="error">{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn--main">
+            </div>
+        </form>
 
-
-<div>
-    <form method="POST" action="">
-        {% csrf_token %}
-
-        {{form.as_p}}
-
-        <input type="submit" value="Register" id="">
-    </form>
-
-    <p>Already Signed </p>
-    <a href="{% url 'login' %}">Login</a>
-    
-</div>
-
+        <p class="auth-text">Already signed up?</p>
+        <a href="{% url 'login' %}" class="auth-link">Login</a>
+    </div>
 {% endif %}
 
-
-{% endblock content%}
+{% endblock content %}

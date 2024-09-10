@@ -12,13 +12,13 @@
 <div class="room-container">
 
     <div class="">
-
+        
     <h1>{{room.name}}</h1>
 
     <p>{{room.description}}</p>
 
     <div class="comment-wrapper">
-        <h3>Conversation</h3>
+        <h3>Conversation ({{participants.count}})</h3>
         <hr>
 
         {% for message in room_messages %}
@@ -46,12 +46,12 @@
     </div>
 
     <div>
-        <h3>Participants</h3>
+        <h3>Participants ({{participants.count}} Joined)</h3>
         <hr>
 
         {% for user in participants %}
             <div>
-                <p>@{{user.username}}</p>
+                <a href="{% url 'user-profile' user.id %}">@{{user.username}}</a>
             </div>
         {% endfor %}
     </div>

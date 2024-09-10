@@ -1,14 +1,41 @@
 {% extends 'main.html' %}
 
-
 {% block content %}
+{% load widget_tweaks %}
 
-<div>
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" value="Submit">
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/room_form.css' %}">
+</head>
+<body>
+    <div class="room-cont">
+        <h3>Create/Update Study Room</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <div class="dropdown">
+                <input type="text" id="topicInput" name="topic" placeholder="Enter your topic" >
+                <label for="topicInput" class="arrow">&#9660;</label>
+                <div class="dropdown-content">
+                    {% for topic in topics %}
+                    <div class="dropdown-item">{{ topic.name }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {{ form.name|attr:"placeholder:Enter your subtopic" }}
+            {{ form.description|attr:"placeholder:Write your description" }}
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
 
 {% endblock content %}

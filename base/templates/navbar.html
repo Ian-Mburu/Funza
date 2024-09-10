@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funza</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/navbars.css' %}">
     <link rel="icon" href="{% static 'images/letter-f.png' %}">
 </head>
 <body>
@@ -19,12 +19,25 @@
 
         <div class="auth-links">
             {% if request.user.is_authenticated %}
-                <p class="username">{{ request.user.username }}  @{{user.username}}</p>
-                <a href="{% url 'logout' %}" class="auth-button-logout">Logout</a>
+                <a href="{% url 'logout' %}" class="logout">Logout</a>
+                <div class="navbar-2">
+
+                    <div class="rounded-avatar">
+                        <a href="{% url 'user-profile' user.id %}">
+                            <img src="{{ request.user.avatar.url }}" alt="User Profile Picture" class="avatar">
+                        </a>
+                    </div>
+        
+                    <a href="{% url 'update-user' %}" class="edit-profile">Settings</a> 
+                    
+                </div>
             {% else %}
                 <button class="auth-button"> <a href="{% url 'login' %}">Login</a> </button>
             {% endif %}
         </div>
+
+        
+
     </div>
 
     
