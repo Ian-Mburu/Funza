@@ -4,7 +4,7 @@
 
 .browse-topics h3 {
     font-size: 20px;
-    color: #ff0000;
+    color: #fdfdfd;
 }
 
 .browse-topics h3:hover {
@@ -20,7 +20,7 @@
 .topic-link a {
     display: inline-block;
     padding: 10px 15px;
-    color: #ff0000;
+    color: #ffffff;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -62,7 +62,7 @@
 .topic-links a {
     display: inline-block;
     padding: 10px;
-    color: #ff0000;
+    color: #ffffff;
     font-size: 16px;
     text-decoration: none;
 }

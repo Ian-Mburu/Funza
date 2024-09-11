@@ -2,7 +2,7 @@
 
 .recent-activity h3 {
     font-size: 20px;
-    color: #ff0000;
+    color: #ffffff;
 }
 
 .activity-card {
@@ -13,7 +13,7 @@
 }
 
 .user-link {
-    color: #007bff;
+    color: #ffffff;
     font-weight: bold;
     text-decoration: none;
     margin-right: 5px;
@@ -24,10 +24,27 @@
 }
 
 .activity-info {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
     margin-bottom: 5px;
     font-size: 14px;
     color: #666;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 .activity-reply {

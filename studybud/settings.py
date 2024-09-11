@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 from decouple import config
 import dj_database_url
@@ -92,10 +93,17 @@ DATABASES = {
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'Funza',       
+#         'USER': 'postgres',        #
+#         'PASSWORD': 'iano3535',        
+#         'HOST': 'localhost',                 
+#         'PORT': '5432',               
 #     }
 # }
+
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'studybud.settings')
 
 
 
