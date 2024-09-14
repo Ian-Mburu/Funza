@@ -1,0 +1,71 @@
+
+
+.recent-activity h3 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.activity-card {
+    background: #f3a1a1;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.user-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.user-link:hover {
+    text-decoration: underline;
+}
+
+.activity-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.activity-reply {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+.activity-message {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.delete-link {
+    color: #dc3545;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+}
