@@ -2,60 +2,65 @@
 
 {% block content %}
 
-<style>
-    .room-container {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-    }
-</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/roomss.css' %}">
+    <link rel="icon" href="{% static 'images/letter-f.png' %}">
+</head>
+<body>
 
 <div class="room-container">
 
-    <div class="">
-        
-    <h1>{{room.name}}</h1>
+    <div class="cont-1">
+        <h1>{{ room.name }}</h1>
+        <p>{{ room.description }}</p>
 
-    <p>{{room.description}}</p>
-
-    <div class="comment-wrapper">
-        <h3>Conversation ({{participants.count}})</h3>
-        <hr>
-
-        {% for message in room_messages %}
-        <div>
-                {% if request.user == message.user %}
-                    <small><a href="{% url 'delete-message' message.id %}">Delete</a></small>
-                {% endif %}
-            <small>@{{message.user}} {{message.created|timesince}} ago </small>
-
-            <p>{{message.body}}</p>
+        <div class="comment-wrapper">
             <hr>
+            <h3>Conversation ({{ participants|length }})</h3>
+
+            {% for message in room_messages %}
+            <div class="conv">
+                {% if request.user == message.user %}
+                <div class="conv-2">
+                    <small><a href="{% url 'delete-message' message.id %}">Delete</a></small>
+                    {% endif %}
+                    <small class="small">@{{ message.user }} <small class="small-1">{{ message.created|timesince }} ago </small> </small>
+                </div>
+
+                <p>{{ message.body }}</p>
+            </div>
+            {% endfor %}
+
+            <div class="comment-form">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <input class="input-1" type="text" name="body" placeholder="Write your message here...">
+                    <input class="input-2" type="submit" value="Send">  <!-- Added Submit button -->
+                </form>
+            </div>
+
         </div>
-
-        {% endfor %}
-
-        <div class="comment-form">
-            <form method="POST" action="">
-                {% csrf_token %}
-                <input type="text" name="body" placeholder="Write your messages here...">
-            </form>
-        </div>
-
     </div>
+    <hr class="hr-1">
 
-    </div>
-
-    <div>
-        <h3>Participants ({{participants.count}} Joined)</h3>
-        <hr>
+    <div class="participants">
+        <h3>Participants ({{ participants|length }} Joined)</h3>
 
         {% for user in participants %}
-            <div>
-                <a href="{% url 'user-profile' user.id %}">@{{user.username}}</a>
-            </div>
+        <div>
+            <a href="{% url 'user-profile' user.id %}">{{ user.username }} joined</a>
+        </div>
         {% endfor %}
     </div>
 
 </div>
+{% endblock %}
 
-{% endblock%}
+</body>
+</html>

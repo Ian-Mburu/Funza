@@ -1,0 +1,123 @@
+.rooms-list {
+    width: 600px;
+    border-radius: 5px;
+    margin: 50px auto; /* Centered horizontally */
+    padding: 20px;
+}
+
+.roomListRoom {
+    background: #302f2f;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.roomListRoom:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+
+}
+
+.roomListRoom__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.roomListRoom__author {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.avatar.avatar--small img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.roomListRoom__actions {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.roomListRoom__content {
+    margin-bottom: 10px;
+}
+
+.room-title {
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: cursive, sans-serif;
+    background: #FF5733;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.room-title:hover {
+    color: #e7baba;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+.roomListRoom__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.roomListRoom__joined {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.styled-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.styled-image {
+    width: 25px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.styled-image:hover {
+    transform: scale(1.1);
+}
+
+.roomListRoom__topic {
+    background: #FF5733;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.group-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.group-icon a {
+    color: #555;
+}

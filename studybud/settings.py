@@ -90,20 +90,18 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-   'default': dj_database_url.parse(config("DATABASE_URL"))
-}
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'Funza',       
-#         'USER': 'postgres',        #
-#         'PASSWORD': 'iano3535',        
-#         'HOST': 'localhost',                 
-#         'PORT': '5432',               
-#     }
-# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Funza',       
+        'USER': 'postgres',        #
+        'PASSWORD': 'iano3535',        
+        'HOST': 'localhost',                 
+        'PORT': '5432',               
+    }
+}
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'studybud.settings')

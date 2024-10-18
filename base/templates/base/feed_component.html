@@ -1,5 +1,5 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'styles/feeds_component.css' %}">
+<link rel="stylesheet" href="{% static 'styles/feedss_component.css' %}">
 
 <div class="rooms-list">
     {% for room in rooms %}
@@ -27,7 +27,7 @@
         <div class="roomListRoom__meta">
             {% if request.user == room.host %}
                 <a href="{% url 'delete-room' room.id %}" class="styled-link">
-                    <img src="{% static 'images/trash.png' %}" alt="Delete Room" class="styled-image">
+                    <img  src="{% static 'images/trash.png' %}" alt="Delete Room" class="styled-image">
                 </a>   
                 <a href="{% url 'update-room' room.id %}" class="styled-link">
                     <img src="{% static 'images/editing.png' %}" alt="Edit Room" class="styled-image">

@@ -1,0 +1,49 @@
+/* Styling for the delete form */
+.delete-form {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 200px;
+}
+
+/* Styling for the text */
+.delete-form p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Styling for the Go Back link */
+.btn-back {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #FF5733 ;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-back:hover {
+    background-color: #ff5833b4 ;
+}
+
+/* Styling for the DELETE button */
+.btn-delete {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}

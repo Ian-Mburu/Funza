@@ -1,0 +1,98 @@
+.edit-profile-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 770px;
+    height: 770px;
+    justify-content: center;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.edit-profile-1 h3 {
+    font-size: 25px;
+    font-family: cursive sans-serif;
+    font-weight: 600;
+    color: #ff0000;
+}
+
+.form-group {
+    margin-bottom: 10px; /* Space between form elements */
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and field */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #ffffff; /* Dark text color */
+}
+
+.form-group input[type="text"], 
+.form-group input[type="email"], 
+.form-group input[type="file"], 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    font-family: cursive, sans-serif;
+    font-size: 14px;
+}
+
+.form-group input[type="text"]:focus, 
+.form-group input[type="email"]:focus, 
+.form-group input[type="file"]:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #fc4040; /* Change border color on focus */
+    outline: none;
+    background: transparent;
+}
+
+.form-group .error {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.update-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.update-profile a {
+    font-size: 16px;
+    font-family: cursive, sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.update-profile a:hover {
+    text-decoration: underline solid 2px;
+    color: #e4dddd;
+}
+
+.update-profile button {
+    border: none;
+    padding: 8px 18px;
+    background: #FF5733;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.update-profile button:hover {
+    background: #f75e5e;
+}

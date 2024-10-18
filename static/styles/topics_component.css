@@ -1,0 +1,86 @@
+.browse-topics {
+    padding: 5px;
+}
+
+.browse-topics h3 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.browse-topics h3:hover {
+    color: #fd5d5d;
+}
+
+.topic-link {
+    background-color: #302f2f;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.topic-link a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.topic-link span {
+    background: #302f2f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.topic-links {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+
+.topic-links span {
+    background: #302f2f;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.topic-link:hover {
+    background-color: #f79494;
+}
+
+.topic-links  {
+    padding: px;
+}
+
+.topic-links a {
+    display: inline-block;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.topic-links a:hover {
+    color: #fd5d5d;
+}
+
+.topic-link-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topic-link-1 span {
+    display: flex;
+    background: #302f2f;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+}

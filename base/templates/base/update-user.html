@@ -4,7 +4,7 @@
 
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'styles/update-user.css' %}">
+<link rel="stylesheet" href="{% static 'styles/update-users.css' %}">
 
 <div class="edit-profile-1">
     <h3>Edit your profile</h3>
@@ -13,16 +13,22 @@
         {% csrf_token %}
 
         {% for field in form %}
-        <div class="form-group">
-          <label for="profile_pic">{{field.label}}</label>
-          {{field}}
-        </div>
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {% if field.name == "avatar" %}
+                    <!-- Check if the user has uploaded a custom avatar -->
+                    {% if user.avatar and user.avatar.url != "/media/avatars/cat.png" %}
+                        <img src="{{ user.avatar.url }}" alt="User Avatar" style="width: 100px; height: 100px;">
+                    {% endif %}
+                {% endif %}
+                {{ field }}
+            </div>
         {% endfor %}
 
-      <div class="update-profile">
-        <a class="btn-cancel-user" href="{% url 'home' %}">Cancel</a>
-        <button class="btn btn--main" type="submit">Update</button>
-      </div>
+        <div class="update-profile">
+            <a class="btn-cancel-user" href="{% url 'home' %}">Cancel</a>
+            <button class="btn btn--main" type="submit">Update</button>
+        </div>
 
     </form>
 </div>

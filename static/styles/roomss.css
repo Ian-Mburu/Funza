@@ -1,0 +1,138 @@
+body {
+    color: #fff;
+}
+
+.room-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cont-1 {
+    width: 900px;
+    padding: 0 0 0 20px;
+}
+
+h1 {
+    color: #ff4800;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: 16px;
+    font-family: sans-serif cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+h3 {
+    color: #ff4800;
+    font-size: 20px;
+}
+
+.participants {
+    margin: 50px 0 0 0px;
+    margin-right: 70px;
+}
+
+.hr-1 {
+    margin-left: 50px;
+}
+
+small a {
+    background: #ff0101;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+small a:hover {
+    background: #e40e0e;
+}
+
+.small {
+    background: #1d1b1b;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 2px;
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.small-1 {
+    background: #b4aeae;
+    padding: 5px;
+    color: #ff2600;
+    font-weight: 600;
+}
+
+small {
+    display: flex;
+    flex-direction: row;
+}
+
+.conv {
+    background: #413e3e;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.conv p {
+    font-size: 16px;
+    font-family: sans-serif cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #ff2600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conv-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 400px;
+    align-items: center;
+}
+
+.input-1 {
+    width: 500px;
+    margin: 50px 0 0 0;
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+}
+
+.input-2 {
+    padding: 10px 30px;
+    color: #fff;
+    background-color: #413e3e;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.input-2:hover {
+    background: #2e2d2d;
+}
+
+a {
+    text-decoration: none;
+    color: #413e3e;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',  Verdana, sans-serif;
+}
