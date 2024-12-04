@@ -43,6 +43,7 @@
     background-color: transparent;
     font-family: cursive, sans-serif;
     font-size: 14px;
+    color: #ffff;
 }
 
 .form-group input[type="text"]:focus, 
@@ -52,6 +53,7 @@
 .form-group textarea:focus {
     border-color: #fc4040; /* Change border color on focus */
     outline: none;
+    color: #fff;
     background: transparent;
 }
 

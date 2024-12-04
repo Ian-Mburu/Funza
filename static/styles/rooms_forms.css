@@ -18,7 +18,7 @@
     font-size: 20px;
     font-family: cursive sans-serif;
     font-weight: 600;
-    color: #ff0000;
+    color: #ffffff;
 }
 
 .room-cont form input[type="text"],
@@ -33,6 +33,7 @@
     border-right: none;    
     box-sizing: border-box;   
     background: transparent;
+    color: #fff;
 }
 
 .room-cont form input[type="submit"] {
@@ -44,7 +45,7 @@
     width: 90px;
     margin-left: 200px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 10px;
     transition: background-color 0.3s ease;
 }
 

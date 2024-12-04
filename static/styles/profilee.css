@@ -1,23 +1,16 @@
 .profile-cont1{
     display: flex;
     flex-direction: row;
-    gap: 50px;
     align-items: center;
     padding: 30px;
-}
-
-.profile-cont2 {
-    margin-top: 5px;
-    width: 400px;
-    height: 650px;
-    border-radius: 5px;
+    color: #fff;
 }
 
 .profile-cont{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px;
+    margin: -200px 0 0 0;
 }
 
 .profile-info {
@@ -29,7 +22,8 @@
 .profile-info h3{
     font-size: 25px;
     font-family: cursive sans-serif;
-    font-weight: 600;letter-spacing: 1px;
+    font-weight: 600;
+    letter-spacing: 1px;
     color: #ffffff;
 }
 
@@ -57,7 +51,8 @@
 .profile-about h3 {
     font-size: 25px;
     font-family: cursive sans-serif;
-    font-weight: 600;letter-spacing: 1px;
+    font-weight: 600;
+    letter-spacing: 1px;
     color: #ffffff;
 }
 
@@ -66,18 +61,23 @@
     font-family: cursive sans-serif;
     letter-spacing: 1px;
     color: #fff;
+    width: 400px;
 }
 
-.user-rooms {
+.cont-3 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
 }
 
-.user-rooms h2 {
-    font-size: 25px;
-    font-family: cursive sans-serif;
-    font-weight: 600;letter-spacing: 1px;
-    color: #ffffff;
-    margin-left: 100px;
-    margin-bottom: -10px;
+.feed {
+    margin-top: 00px;
+}
+
+.feed-par {
+    margin: 0 0 -25px 20px;
+}
+
+.activities {
+    margin-top: 00px;
 }

@@ -4,23 +4,14 @@
 {% block content %}
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'styles/profiles.css' %}">
+<link rel="stylesheet" href="{% static 'styles/profilee.css' %}">
 
 <div class="profile-cont1">
 
-    {% if posts %}
-    <div class="user-activity">
-        {% include 'base/activity_component.html' %}
-    </div>
-    {% endif %}
-
-    <div class="profile-cont2">
     <div class="profile-cont">
         
         <div class="rounded-avatar">
-            <a href="{% url 'user-profile' user.id %}">
-                <img src="{{ request.user.avatar.url }}" alt="User Profile Picture" class="avatar">
-            </a>
+            <img src="{{ request.user.avatar.url }}" alt="User Profile Picture" class="avatar">
         </div>
 
         <div class="profile-info">
@@ -38,15 +29,20 @@
         </div>
  
     </div>
+
+    <div class="cont-3">
+        <div class="feed">
+            <h2 class="feed-par">Study Posts Hosted by {{user.username}} </h2>
+            {% include 'base/feed_component.html' %}
+        </div>
+    
+        <div class="activities">
+            {% include 'base/activity_component.html' %}
+        </div>
+       
     </div>
 
-    {% if posts %}
-        <div class="user-rooms">
-            <h2>Study Posts Hosted by Ian</h2>
-            {% include 'base/feed_component.html' %}
 
-        </div>
-    {% endif %}
 
 </div>
 
